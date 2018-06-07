@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientController">
+   <bottom>
+      <HBox id="bottomHBox" prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField id="userTextfield" fx:id="userTextfield" onKeyPressed="#textFieldEnterPressed" prefHeight="86.0" prefWidth="718.0" promptText="Type Message here" />
+            <Button id="messageSendButton" fx:id="MessageSendButton" mnemonicParsing="false" onAction="#sendMessage" prefHeight="39.0" prefWidth="244.0" text="Send" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menuBarFriend" mnemonicParsing="false" text="Friends">
+            <items>
+              <MenuItem id="menuBarFriend" fx:id="menuBarFriend" mnemonicParsing="false" onAction="#addFriend" text="Add Friend" />
+            </items>
+          </Menu>
+          <Menu id="menuBarOptions" mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Log In" />
+            </items>
+          </Menu>
+          <Menu id="menuBarHelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane id="CenterAnchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane id="tabPane" fx:id="tabPane" prefHeight="462.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="0.0" />
+            <ListView id="friendsList" fx:id="friendsList" layoutX="719.0" prefHeight="471.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

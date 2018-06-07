@@ -1,0 +1,15 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Tab id="tab1" text="Friend1">
+           <content>
+              <ScrollPane  prefHeight="379.0" prefWidth="719.0">
+                 <content>
+                     <TextFlow prefHeight="418.0" prefWidth="700.0" />
+                  </content>
+              </ScrollPane>
+           </content></Tab>
